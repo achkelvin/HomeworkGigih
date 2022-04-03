@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Data from "./data/Data";
-import Song from "./components/Tracks"
+import Song from "./components/Album/Song"
 import { Component } from "react";
 
 class App extends Component {
