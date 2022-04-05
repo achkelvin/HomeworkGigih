@@ -1,39 +1,16 @@
-import React, { useState } from 'react';
-import './index.css';
-import PropTypes from 'prop-types';
-import Button from '../Button';
+import Button from "./Button";
 
-export default function Track({ imageUrl, title, artist, toggleSelect }) {
-  const [isSelected, setIsSelected] = useState(false);
-
-  const handleToggleSelect = () => {
-    setIsSelected(!isSelected);
-    toggleSelect();
-  }
-
-  return (
-    <div className="card">
-      <div className="card__image">
-        <img src={imageUrl} alt={title} />
-      </div>
-
-      <div className="card__data">
-        <div className="card__content">
-          <h3 className="card__title">{title}</h3>
-          <p className="card__artist">{artist}</p>
+const SongCard = ({ imgSrc, title, artists,releasedate, album, Selected, handleSelect, uri }) => {
+    return (
+        <div className="card-search">
+                <img src={imgSrc} alt="" />
+                <h1>Album : {album}</h1>
+                <h3>Title : {title}</h3>
+                <h2> Artist : {artists.map(artist => artist.name).join(', ')}</h2>
+                <h2> Release Date : {releasedate}</h2>
+            <Button handleSelect={handleSelect} Selected={Selected} uri={uri}/>
         </div>
-        
-        <div className="card__action">
-          <Button variant={isSelected ? 'primary' : 'secondary'} onClick={handleToggleSelect}>{isSelected ? 'Deselect' : 'Select'}</Button>
-        </div>
-      </div>
-    </div>
-  );
+    );
 }
 
-Track.propTypes = {
-  imageUrl: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  artist: PropTypes.string.isRequired,
-  toggleSelect: PropTypes.func.isRequired,
-}
+export default SongCard;
