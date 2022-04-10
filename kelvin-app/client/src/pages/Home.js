@@ -1,26 +1,30 @@
+import { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
 import queryString from 'query-string';
-import { useState, useEffect } from 'react';
 import Login from './Login';
-import SearchPage from './SearchPage';
-
+import { setAccessToken } from '../redux/Token'
 
 const Home = () => {
-  const [accessToken, setAccessToken] = useState();
+  const accessToken = useSelector((state) => state.accessToken.value)
+  const dispatch = useDispatch(); 
+  const history = useHistory(); 
+
   useEffect(() => {
-    const parsed = queryString.parse(window.location.hash);
-    setAccessToken(parsed.access_token);
-  }, [accessToken])
+    const parsed = queryString.parse(window.location.hash); 
+    dispatch(setAccessToken(parsed.access_token)); 
+  }, [accessToken, dispatch])
+
+  useEffect(() => {
+    accessToken !== undefined && (
+      history.push("create-playlist") 
+    )
+  }, [accessToken, history])
 
   return (
-    <div className="Home">
-      <h1>Spotify Added Playlist</h1>
-      {accessToken !== undefined ? (
-        <>
-          <SearchPage accessToken={accessToken}/>              
-        </>
-      )
-        :
-        (<Login />)}
+    <div>
+      <h1>Spotify Create Playlist</h1>
+      <Login />
     </div>
   )
 }

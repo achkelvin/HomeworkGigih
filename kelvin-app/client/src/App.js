@@ -1,14 +1,13 @@
 import './App.css';
-import Home from './pages/Home';
 import { Provider } from "react-redux";
 import store from './Store';
-import Login from './pages/Login';
+import AppRouter from './router';
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <Home />
+        <AppRouter />
       </div>
     </Provider>
   );

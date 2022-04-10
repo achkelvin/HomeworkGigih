@@ -1,4 +1,4 @@
-const Playlist = ({ hanldeAddPlaylist, handleAddSubmit, addPlaylistData}) => {
+const Playlist = ({ hanldeAddPlaylist, handleAddSubmit, addPlaylistData }) => {
     return (
         <div className="form-playlist">
             <h2>Create Playlist</h2>

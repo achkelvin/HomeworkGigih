@@ -1,8 +1,28 @@
-const Profile = ({ fetchUserData, user }) => {
+import { useSelector, useDispatch } from "react-redux"
+import { user_id } from "../redux/Slice"
+import { userDisplayName } from "../redux/Slice"
+import axios from "axios"
+
+const Profile = () => {
+    const accessToken = useSelector((state) => state.accessToken.value)
+    const displayName = useSelector((state) => state.user.value.displayName)
+    const dispatch = useDispatch();
+
+    const fetchUserData = async () => {
+        const data = await axios
+            .get(
+                `https://api.spotify.com/v1/me?access_token=${accessToken}`
+            )
+            .catch((error) => error)
+        dispatch(user_id(data.data.id))
+        dispatch(userDisplayName(data.data.display_name))
+    }
+
     return (
         <div className="profile">
-            <button onClick={fetchUserData}>User Spotify Profile</button>
-            {user.user_id !== undefined && <h1>Username : {user.displayName}</h1>}
+            {displayName !== undefined ? 
+            <p>Logged in as: {displayName}</p> : 
+            <button onClick={fetchUserData} className="selectButton">get Users Data</button>}
         </div>
     )
 }
