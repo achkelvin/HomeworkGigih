@@ -8,7 +8,7 @@ const SongCard = ({ imgSrc, title, artists,releasedate, album, Selected, handleS
                 <h3>Title : {title}</h3>
                 <h2> Artist : {artists.map(artist => artist.name).join(', ')}</h2>
                 <h2> Release Date : {releasedate}</h2>
-            <Button handleSelect={handleSelect} Selected={Selected} uri={uri}/>
+                <button onClick={() => handleSelect(uri)}> {Selected ? 'Deselect' : 'Select'} </button>
         </div>
     );
 }
