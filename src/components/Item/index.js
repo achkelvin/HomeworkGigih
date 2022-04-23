@@ -12,8 +12,8 @@ const Songs = ({ mergedTracks, handleSelect }) => {
           artists={track.artists}
           album={track.album.name}
           releasedate={track.album.release_date}
-          handleSelect={handleSelect} 
-          Selected={track.Selected}      
+          handleSelect={handleSelect}
+          Selected={track.Selected}
         />
       </div>
     )

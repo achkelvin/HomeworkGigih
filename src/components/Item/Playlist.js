@@ -1,16 +1,16 @@
 const Playlist = ({ hanldeAddPlaylist, handleAddSubmit, addPlaylistData }) => {
     return (
         <div className="form-playlist">
-            <h2>Create Playlist</h2>
+            <h2>Create a Playlist</h2>
             <form onSubmit={handleAddSubmit}>
-                <label>Name</label><br />
-                <input id="title" type="text" value={addPlaylistData.title} onChange={hanldeAddPlaylist} name="title" />
+                <label>Title</label><br />
+                <input id="title" type="text" min="10" value={addPlaylistData.title} onChange={hanldeAddPlaylist} name="title" />
                 <br />
                 <br></br>
                 <label> Description </label><br />
                 <textarea id="description" type="text" value={addPlaylistData.description} onChange={hanldeAddPlaylist} name="description" />
                 <br />
-                <button className="selectButton" type="submit" value="Submit" onclick="alert('Your playlist has been saved!')">Save</button>
+                <button id="save" className="selectButton" type="submit" value="Submit" onClick={() => {alert("After klik this alert, Your playlist will saved in your spotify! ");}}>Save</button>
             </form>
         </div>
     )

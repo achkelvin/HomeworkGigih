@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { userID } from "../redux/Slice"
 import { userDisplayName } from "../redux/Slice"
-import {setImgSrc} from "../redux/Slice"
+import { setImgSrc } from "../redux/Slice"
 import axios from "axios"
 
 

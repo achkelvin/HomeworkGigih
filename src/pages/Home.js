@@ -23,7 +23,6 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Spotify Create Playlist</h1>
       <Login />
     </div>
   )

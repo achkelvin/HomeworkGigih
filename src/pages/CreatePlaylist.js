@@ -114,18 +114,14 @@ const CreatePlaylist = () => {
             .catch((error) => error)
         console.log(data);
     }
-     const [masuk, setmasuk] = useState(false);
     const handlekeluar = ()=>{
-        setmasuk(false);
         localStorage.clear()
         window.location = `http://localhost:3000/`;
     }
 
     return (
         <>
-            <h1> Spotify Create Playlist</h1>
-            <h1> --------------------------- </h1>
-            <button onClick={handlekeluar}>LogOut</button>
+            <button onClick={handlekeluar}>Log Out</button>
             <Playlist
                 hanldeAddPlaylist={hanldeAddPlaylist}
                 handleAddSubmit={handleAddSubmit}

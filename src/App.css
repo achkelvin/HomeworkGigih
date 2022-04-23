@@ -1,26 +1,26 @@
 body {
-  background-color: black;
+  background-image: url("./components/assets/bus.jpg");
+  background-size: fill;
   color: white;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
 }
 .form-playlist {
+  border: 5px solid white;
+  border-radius: 50%;
   text-align: center;
-  border: 10px solid white;
-  border-radius: 10px;
-  text-align: center;
-  background-color: #8704ab;
+  background-color: rgba(173, 17, 194, 0.59);
   margin-top: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-right: 200px;
-  margin-left: 200px;
+  display: grid;
+  place-items: center;
 }
 
 .form-playlist textarea {
   height: 40px;
   width: 230px;
-  background-color:#cff5dc;
+  background-color: rgba(173, 17, 194, 0.70);
   border-radius: 4px;
   margin-top: 5px;
 }
@@ -28,7 +28,7 @@ body {
 input {
   height: 40px;
   width: 230px;
-  background-color: #cff5dc;
+  background-color: rgba(173, 17, 194, 0.70);
   border-radius: 4px;
   margin-top: 5px;
 }
@@ -37,7 +37,7 @@ button {
   border: none;
   border-radius: 30px;
   color: rgb(255, 255, 255);
-  background-color: #3f6d4f;
+  background-color: black;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
@@ -49,7 +49,7 @@ button {
 }
 
 button:hover {
-  background-color: #cff5dc;
+  background-color: rgba(173, 17, 194, 0.59);
   color: black;
   border: 2px solid black;
 }
@@ -63,14 +63,12 @@ button:hover {
   padding-bottom: 100px;
   margin-right: 150px;
   margin-left: 150px;
-  background-color: #cff5dc;
+  background-color: rgba(173, 17, 194, 0.59);
 }
 
-/* FLEX USED FOR SONG INFO */
 .card-search {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  place-items: center;
   font-size: 10px;
   text-align: center;
 }
@@ -84,9 +82,8 @@ button:hover {
   margin: 20px;
 }
 
-/* GRID USED FOR TRACK TABLES */
 .song-card {
-  background-color: #cff5dc;
+  background-color: rgba(173, 17, 194, 0.59);
   display: grid;
   grid-template-columns: minmax(500px, 30%) 1fr;
   border: 1px solid #192f1f;
@@ -115,7 +112,7 @@ button:hover {
   border: 1px solid black;
   border-radius: 50px;
   margin: 20px;
-  background-color: #cff5dc;
+  background-color: rgba(173, 17, 194, 0.59);
   width: 20%;
 }
 
@@ -133,7 +130,7 @@ button:hover {
   text-align: center;
   border: 1px solid #192f1f;
   border-radius: 10px;
-  background-color: #b2edc7;
+  background-color: rgba(173, 17, 194, 0.59);
   margin-top: 30px;
   margin-left: 500px;
   margin-right: 500px;
@@ -144,7 +141,7 @@ button:hover {
   text-align: center;
   border: 1px solid #192f1f;
   border-radius: 10px;
-  background-color: #b2edc7;
+  background-color: rgba(173, 17, 194, 0.59);
   margin-top: 20px;
   margin-left: 200px;
   margin-right: 200px;

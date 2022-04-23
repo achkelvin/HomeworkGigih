@@ -102,7 +102,7 @@ const SearchPage = ({ accessToken }) => {
                 handlAddSongPlaylist(response.data.id)))
             .catch((error) => error)
     }
-    
+
     const itemParams = {
         uris: selectedSong
     }
@@ -120,7 +120,7 @@ const SearchPage = ({ accessToken }) => {
         console.log(data);
     }
     const [masuk, setmasuk] = useState(false);
-    const handlekeluar = ()=>{
+    const handlekeluar = () => {
         setmasuk(false);
         localStorage.clear()
         window.location = `http://localhost:3000/`;
@@ -133,7 +133,7 @@ const SearchPage = ({ accessToken }) => {
                 user={user} />
             <hr></hr>
             <div>
-            <button onClick={handlekeluar}>LogOut</button>
+                <button onClick={handlekeluar}>Log Out</button>
             </div>
             {user.user_id !== undefined && (
                 <>
