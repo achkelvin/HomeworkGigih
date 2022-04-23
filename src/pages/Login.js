@@ -1,6 +1,6 @@
 const Login = () => {
     const clientID = '342bc7f599c441feb8418cdf919d1182';
-    const redirectURI = 'https://finalprojectgg2fe.vercel.app/';
+    const redirectURI = 'https://final-project-gg2fe.vercel.app/';
     const scope = 'playlist-modify-private';
     var url = 'https://accounts.spotify.com/authorize';
     url += '?response_type=token';
