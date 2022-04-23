@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Gigih's Playlist
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Gigih's Playlist is a Spotify clone web app for Gigih to create a playlist purpose.
 
-## Available Scripts
+## Features
+1. Search song
+2. Detail song i.e. Cover, Title, Artist, Album and Release date
+3. Add playlist
+4. Select, deselect song
 
-In the project directory, you can run:
 
-### `npm start`
+## Visuals
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img width="945" alt="image" src="https://user-images.githubusercontent.com/72923592/164888119-80d2c2bc-d77f-4785-b178-65dae2aa85ce.png">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Run and Installation
+You can directly run and access by this link [Gigih's Playlist](https://final-project-gg2fe-achkelvin.vercel.app/)
 
-### `npm test`
+> Or, Installation on local
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone and download the code
+```
+https://github.com/achkelvin/HomeworkGigih.git
+```
+2. Go to directory file and exract the compressed .zip
+3. Open CLI and cd the directory path of the extracted .zip
+4. Install required dependencies
+```
+npm install
+```
+5. After all required modules have been installed, Run the program with CLI and it would be automatically start the server in browser
+```
+npm start
+```
